@@ -14,6 +14,7 @@ namespace BizUnit.Core.ExtensionMethods
             var ms = new MemoryStream();
             var sw = new StreamWriter(ms);
             sw.Write(data);
+            sw.Flush();
             ms.Seek(0, SeekOrigin.Begin);
             return ms;
         }
